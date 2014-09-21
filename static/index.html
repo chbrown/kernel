@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Kernel UI</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+  <link href="/static/site.css" rel="stylesheet" type="text/css" />
+  <!-- vendor -->
+  <script src="/static/lib/lodash.min.js"></script>
+  <script src="/static/lib/angular.min.js"></script>
+  <script src="/static/lib/angular-resource.min.js"></script>
+  <script src="/static/lib/angular-ui-router.min.js"></script>
+  <script src="/static/lib/ngStorage.min.js"></script>
+  <!-- local app -->
+  <script src="/static/ng/app.js"></script>
+</head>
+<body ng-app="app" ng-controller="comparisonCtrl">
+  <nav>
+    <label>Context
+      <input ng-model="$storage.context_id">
+    </label>
+  </nav>
+
+  <main>
+    <h2>REPL</h2>
+    <form ng-submit="runInContext(code, $storage.context_id, $event)">
+      <label>
+        <div>Code</div>
+        <input ng-model="code">
+      </label>
+      <button>Run</button>
+    </form>
+    <h2>Output</h2>
+    <div ng-repeat="call in calls">
+      <textarea disabled ng-bind="call.code"></textarea>
+      <code>{{call.output}}</code>
+    </div>
+  </main>
+</body>

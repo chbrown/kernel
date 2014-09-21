@@ -1,0 +1,39 @@
+{
+  "name": "kernel",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/chbrown/kernel",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chbrown/kernel.git"
+  },
+  "bugs": {
+    "email": "Christopher Brown <io@henrian.com>",
+    "url": "http://github.com/chbrown/kernel/issues"
+  },
+  "license": "MIT",
+  "author": "Christopher Brown <io@henrian.com> (http://henrian.com)",
+  "dependencies": {
+    "async": "*",
+    "http-enhanced": "*",
+    "lodash": "*",
+    "loge": "*",
+    "regex-router": "*",
+    "send": "*",
+    "streaming": "*",
+    "optimist": "*",
+    "ws": "*"
+  },
+  "staticPattern": "static/lib/{file}",
+  "staticDependencies": {
+    "angular": "*",
+    "angular-ui-router": "*",
+    "lo-dash": "*",
+    "ng-storage": "*"
+  },
+  "config": {
+    "hostname": "0.0.0.0",
+    "port": 2002
+  }
+}
